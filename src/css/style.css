@@ -7,7 +7,7 @@
 
 html {
         background-color: var(--black-color);
-        font-family: 'Roboto Mono', monospace;
+        font-family: 'DM Sans', sans-serif;
         color: var(--white-color);
 }
 
@@ -26,26 +26,43 @@ html {
 
 
 #logo-cont {
-        position: fixed;
-        top: 60px;
-        left: 20vw;
-        width: 200px;
+        position: relative;
+        top: 8px;
+        width: 70px;
+        height: 70px;
+        padding: 0px;
         overflow: hidden;
-        animation: logo-anime 2s ease-in-out;
-        animation-iteration-count: 1;
         transition: 1s;
 }
 
-@keyframes logo-anime {
-        0% {
-                width: 0px;
-        }
+#menu {
+        display: block;
+        position: fixed;
+        width: fit-content;
+        height: 50px;
+        left: 50%;
+        transform: translate(-50%, 0);
 
-        100% {
-                width: 200px;
-        }
 }
 
+
 #logo-cont img {
-        width: 200px;
+        width: 70px;
+}
+
+.menu-item {
+        position: relative;
+        display: inline-block;
+        padding: 2px;
+        top: -24px;
+}
+
+#sets {
+        width: fit-content;
+        cursor: pointer;
+}
+
+#list {
+        width: fit-content;
+        cursor: pointer;
 }

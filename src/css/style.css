@@ -1,0 +1,51 @@
+:root {
+        --black-color: #000;
+        --white-color: #fff;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap');
+
+html {
+        background-color: var(--black-color);
+        font-family: 'Roboto Mono', monospace;
+        color: var(--white-color);
+}
+
+*,
+*::after,
+*::before {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        color: inherit;
+        font-family: inherit;
+        line-height: inherit;
+        text-decoration: none;
+}
+
+
+#logo-cont {
+        position: fixed;
+        top: 60px;
+        left: 20vw;
+        width: 200px;
+        overflow: hidden;
+        animation: logo-anime 2s ease-in-out;
+        animation-iteration-count: 1;
+        transition: 1s;
+}
+
+@keyframes logo-anime {
+        0% {
+                width: 0px;
+        }
+
+        100% {
+                width: 200px;
+        }
+}
+
+#logo-cont img {
+        width: 200px;
+}

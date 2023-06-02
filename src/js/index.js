@@ -72,4 +72,30 @@ function darkModeOn() {
         }`;
 }
 
-console.log(darkModeElem.innerHTML);
+const listButton = document.getElementById("list");
+const listCont = document.getElementById("list-cont");
+let listState = false;
+
+listButton.addEventListener("click", () => {
+        if (listState === false) {
+                listCont.style.height = "445px";
+                listCont.style.opacity = "1";
+                listState = true;
+        } else {
+                listCont.style.height = "0px";
+                listCont.style.opacity = "0";
+                listState = false;
+        }
+});
+
+const itemsCont = document.getElementById("items-cont");
+const aLinks = itemsCont.querySelectorAll("a");
+
+const imgPreview = document.getElementById("img-preview");
+
+aLinks.forEach((element) => {
+        element.addEventListener("mouseover", () => {
+                let imageSrc = document.getElementById(element.name).children[0].src;
+                imgPreview.src = imageSrc;
+        });
+});

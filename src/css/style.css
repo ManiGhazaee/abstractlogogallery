@@ -71,6 +71,7 @@ html {
         color: var(--p-color);
         scroll-behavior: smooth;
         transition: 800ms;
+        min-height: 2600px;
 }
 
 *,
@@ -118,6 +119,7 @@ html {
         0% {
                 opacity: 0;
         }
+
         100% {
                 opacity: 1;
         }
@@ -181,7 +183,7 @@ img {
         grid-template-columns: repeat(3, 280px);
         grid-auto-rows: 360px;
         position: relative;
-        top: 200px;
+        top: 143px;
         left: 50%;
         transform: translate(-50%, 0);
 }
@@ -246,10 +248,68 @@ img {
         z-index: 99;
 }
 
+
+
+#list-cont {
+        display: block;
+        position: relative;
+        top: 125px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 900px;
+        height: 0px;
+        padding: 10px;
+        border: 2px solid var(--p-color);
+        border-radius: 2rem;
+        overflow: hidden;
+        opacity: 0;
+        transition: all 800ms;
+}
+
+#items-cont {
+        padding: 10px;
+}
+
+#items-cont>h3 {
+        margin-left: 4px;
+        margin-bottom: 4px;
+}
+
+#items-cont>a {
+        display: block;
+        width: 60px;
+        padding: 5px;
+        border-radius: 999px;
+        text-align: center;
+        transition: 200ms;
+}
+
+#items-cont>a:hover {
+        background-color: var(--p-color);
+        color: var(--bg-color);
+}
+
+#img-preview-cont {
+        display: inline-block;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        transition: 800ms;
+}
+
+#img-preview-cont>img {
+        height: 445px;
+        width: auto;
+}
+
 @media only screen and (max-width: 955px) {
         #logos-cont {
                 max-width: 600px;
                 grid-template-columns: repeat(2, 280px);
+        }
+
+        #list-cont {
+                width: 600px;
         }
 }
 
@@ -269,5 +329,13 @@ img {
 
         .big {
                 width: 280px;
+        }
+
+        #list-cont {
+                width: 280px;
+        }
+
+        #img-preview-cont {
+                width: 0px;
         }
 }

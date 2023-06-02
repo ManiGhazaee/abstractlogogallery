@@ -70,6 +70,7 @@ html {
         font-family: 'DM Sans', sans-serif;
         color: var(--p-color);
         scroll-behavior: smooth;
+        transition: 800ms;
 }
 
 *,
@@ -95,6 +96,7 @@ html {
         overflow: hidden;
         transition: 1s;
         cursor: pointer;
+        transition: 800ms;
 }
 
 #menu {
@@ -105,17 +107,20 @@ html {
         left: 50%;
         transform: translate(-50%, 0);
         z-index: 50;
+        transition: 800ms;
 }
 
 
 #logo-cont img {
         width: 70px;
         border: none;
+        transition: 800ms;
 }
 
 img {
         width: 280px;
         border-radius: 2rem;
+        transition: 800ms;
 }
 
 .menu-item {
@@ -206,6 +211,7 @@ img {
         height: 120px;
         background: linear-gradient(to bottom, var(--bg-color)30%, rgba(0, 0, 0, 0) 100%);
         z-index: 40;
+        transition: 800ms;
 }
 
 @media (prefers-reduced-motion) {

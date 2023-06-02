@@ -1,6 +1,7 @@
 :root {
         --bg-color: #000;
         --p-color: #fff;
+        --s-color: #00000080;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap');
@@ -167,6 +168,16 @@ img {
         transform: translate(-50%, 0);
 }
 
+.hidden {
+        opacity: 0;
+        transition: all 1s;
+}
+
+.visible {
+        transform: translateY(-10px);
+        opacity: 1;
+}
+
 .img-cont {
         display: inline-block;
         width: fit-content;
@@ -195,4 +206,10 @@ img {
         height: 120px;
         background: linear-gradient(to bottom, var(--bg-color)30%, rgba(0, 0, 0, 0) 100%);
         z-index: 40;
+}
+
+@media (prefers-reduced-motion) {
+        .hidden {
+                transition: none;
+        }
 }

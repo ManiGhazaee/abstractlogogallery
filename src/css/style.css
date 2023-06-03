@@ -278,6 +278,7 @@ img {
 #items-cont>a {
         display: block;
         width: 60px;
+        height: 31px;
         padding: 5px;
         border-radius: 999px;
         text-align: center;
